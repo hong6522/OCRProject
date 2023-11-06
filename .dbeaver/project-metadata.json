@@ -1,0 +1,1 @@
+{"resources":{"Scripts/Script-1.sql":{"default-datasource":"mariaDB-188467f76b5-2d00aa6028aa28c9","default-catalog":"hongst_db"},"Scripts/Script-2.sql":{"default-datasource":"mariaDB-1884694b9ff-3be5b9b64c169f71","default-catalog":"hongst_db"},"Scripts/Script.sql":{"default-datasource":"mariaDB-188467f76b5-2d00aa6028aa28c9","default-catalog":"mysql"}}}

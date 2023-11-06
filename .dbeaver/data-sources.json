@@ -1,0 +1,90 @@
+{
+	"folders": {},
+	"connections": {
+		"mariaDB-188467e197f-b6baef7d515c2d4": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "green_db",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"url": "jdbc:mariadb://localhost:3306/",
+				"configurationType": "MANUAL",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"mariaDB-188467f76b5-2d00aa6028aa28c9": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "mysql",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "mysql",
+				"url": "jdbc:mariadb://localhost:3306/mysql",
+				"configurationType": "MANUAL",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		},
+		"mariaDB-1884694b9ff-3be5b9b64c169f71": {
+			"provider": "mysql",
+			"driver": "mariaDB",
+			"name": "hongst_db",
+			"save-password": true,
+			"configuration": {
+				"host": "localhost",
+				"port": "3306",
+				"database": "hongst_db",
+				"url": "jdbc:mariadb://localhost:3306/hongst_db",
+				"configurationType": "MANUAL",
+				"home": "mysql_client",
+				"type": "dev",
+				"auth-model": "native"
+			}
+		}
+	},
+	"virtual-models": {
+		"mariaDB-1884694b9ff-3be5b9b64c169f71": {
+			"hongst_db": {
+				":parking": {
+					"foreign-keys": [
+						{
+							"entity": "database://mariaDB-1884694b9ff-3be5b9b64c169f71/org.jkiss.dbeaver.ext.mysql.model.MySQLCatalog/hongst_db/org.jkiss.dbeaver.ext.mysql.model.MySQLTable/parking_ad",
+							"constraint": "parking_ad_VK",
+							"attributes": {
+								"plate": "plate_ad"
+							}
+						}
+					]
+				},
+				":parking_ad": {
+					"constraints": {
+						"parking_ad_VK": {
+							"type": "vpk",
+							"attributes": [
+								"plate_ad"
+							]
+						}
+					}
+				}
+			}
+		}
+	},
+	"connection-types": {
+		"dev": {
+			"name": "Development",
+			"color": "255,255,255",
+			"description": "Regular development database",
+			"auto-commit": true,
+			"confirm-execute": false,
+			"confirm-data-change": false,
+			"auto-close-transactions": false
+		}
+	}
+}
